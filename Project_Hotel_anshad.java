@@ -28,7 +28,7 @@ class HotelManagementService {
                 str = str + rs_chk + ",'";
                 str = str + guestName + "',";
                 str = str + numberOfGuests +")";
-                System.out.println("\n"+str);
+                // System.out.println("\n"+str);
                 st.executeUpdate(str);//
 
                 //getting reservation ID :
@@ -40,7 +40,7 @@ class HotelManagementService {
 
                 //updating values to table : rooms
                 str = "update rooms set is_booked = 1 where room_number = "+rs_chk +";";
-                System.out.println("Reservation successful! Reservation ID: " + res_id);
+                System.out.println("Reservation successful!\n Reservation ID is : " + res_id);
                 st.executeUpdate(str);
              } else {
                  System.out.println("Sorry, no available rooms for reservation.");
@@ -61,6 +61,7 @@ class HotelManagementService {
             ResultSet rs;
             String str = "select * from reservations";
             rs = st.executeQuery(str); //The result of the query is stored in ResultSet object "rs".
+            boolean found = false;
             while(rs.next()){
                 
                 // System.out.println(rs.getInt("reservation_id")+" "+rs.getInt("room_number")+" "+rs.getString("guest_name")+" "+rs.getInt("number_of_guests"));
@@ -76,11 +77,13 @@ class HotelManagementService {
                     // System.out.println(str);
                     st.executeUpdate(str);
                     System.out.println("\nReservation with ID " + reservationId + " is Cancelled!");
+                    found = true;
                     break;
-                }
-                else {
-                    System.out.println("\nReservation with ID " + reservationId + " not found.");
+
                     }
+                }
+                if (!found) {
+                    System.out.println("\nReservation with ID " + reservationId + " not found.");
                 }
             } catch (Exception e) {
                 System.out.println("\nError : "+e);
@@ -143,6 +146,35 @@ class HotelManagementService {
         }
    
     }
+
+    //Find Room from Customer Name
+    public void findRoom(String gname) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
+            Statement st = con.createStatement();
+            String str = "SELECT * FROM reservations";
+            ResultSet rs = st.executeQuery(str);
+            
+            boolean found = false;
+            System.out.println("\nDisplaying All Reservations --------->");
+            while (rs.next()) {
+                int roomNumber = rs.getInt("room_number");
+                String guestName = rs.getString("guest_name");
+                if (guestName.equals(gname)) {
+                    System.out.println("\nRoom Number of " + gname + " is : " + roomNumber);
+                    found = true;
+                    break;
+                }
+            }
+            
+            if (!found) {
+                System.out.println("Sorry, there is no Room Reserved for the given Customer");
+            }
+        } catch (Exception e) {
+            System.out.println("\nError : " + e);
+        }
+    }
 }
 
 
@@ -156,12 +188,16 @@ public class Project_Hotel_anshad {
         Scanner s = new Scanner(System.in);
 
         while(true){
-            System.out.println("\nHotel Management System Menu----->");
-            System.out.println("1. Book a Room");
-            System.out.println("2. Cancel Reservation");
-            System.out.println("3. View Available Rooms");
-            System.out.println("4. View All Reservations");
-            System.out.println("5. Exit");
+            System.out.println("======================================================");
+            System.out.println("*            Hotel Management System                 *");
+            System.out.println("======================================================");
+            System.out.println("* 1. Make a Reservation                              *");
+            System.out.println("* 2. Cancel Reservation                              *");
+            System.out.println("* 3. View Available Rooms                            *");
+            System.out.println("* 4. View ALL Reservations                           *");
+            System.out.println("* 5. Find Room from Guest Name                       *");
+            System.out.println("* 6. EXIT                                            *");
+            System.out.println("======================================================");
             System.out.print("\nEnter your choice: ");
             ch = s.nextInt();
 
@@ -194,9 +230,15 @@ public class Project_Hotel_anshad {
                     hotelService.displayAllReservations();
                     break;
             case 5:
+                    System.out.println("\nEnter the name of the Guest : ");
+                    s.nextLine();
+                    String gname = s.nextLine();
+                    hotelService.findRoom(gname);
+                    break;
+            case 6:
                     System.out.println("Exiting...");
                     System.exit(0);
-                default:
+            default:
                     System.out.println("Invalid choice. Please try again.");
 
             }

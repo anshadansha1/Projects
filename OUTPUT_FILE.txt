@@ -1,0 +1,231 @@
+
+E:\MCA\SEM 2\JAVA PROGRAMMING (MCA202)\JAVA_project_anshad\Final_Hotel_Management_system@anshad>java Project_Hotel_anshad
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Muhammad Anshad P A
+Enter number of guests: 3
+Reservation successful!
+ Reservation ID is : 27
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Nihal Muhammad
+Enter number of guests: 2
+Reservation successful!
+ Reservation ID is : 28
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Majo Augustine
+Enter number of guests: 2
+Reservation successful!
+ Reservation ID is : 29
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Hari
+Enter number of guests: 4
+Reservation successful!
+ Reservation ID is : 30
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Jibin Sabu
+Enter number of guests: 2
+Reservation successful!
+ Reservation ID is : 31
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 1
+
+Enter the guest name: Abhinav M S
+Enter number of guests: 3
+Reservation successful!
+ Reservation ID is : 32
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 3
+
+Available Rooms ---------->
+Room Number : 1007
+
+--------------------------------
+Room Number : 1008
+
+--------------------------------
+Room Number : 1009
+
+--------------------------------
+Room Number : 1010
+
+--------------------------------
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 4
+
+Displaying All Reservations --------->
+
+Reservation ID: 30
+Guest Name: Hari
+Room Number: 1004
+Number of Guests: 4
+-----------------
+
+Reservation ID: 28
+Guest Name: Nihal Muhammad
+Room Number: 1002
+Number of Guests: 2
+-----------------
+
+Reservation ID: 29
+Guest Name: Majo Augustine
+Room Number: 1003
+Number of Guests: 2
+-----------------
+
+Reservation ID: 27
+Guest Name: Muhammad Anshad P A
+Room Number: 1001
+Number of Guests: 3
+-----------------
+
+Reservation ID: 31
+Guest Name: Jibin Sabu
+Room Number: 1005
+Number of Guests: 2
+-----------------
+
+Reservation ID: 32
+Guest Name: Abhinav M S
+Room Number: 1006
+Number of Guests: 3
+-----------------
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 2
+
+Enter reservation ID to cancel: 30
+
+Reservation with ID 30 is Cancelled!
+
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 5
+
+Enter the name of the Guest :
+Abhinav M S
+
+Displaying All Reservations --------->
+
+Room Number of Abhinav M S is : 1006
+======================================================
+*            Hotel Management System                 *
+======================================================
+* 1. Make a Reservation                              *
+* 2. Cancel Reservation                              *
+* 3. View Available Rooms                            *
+* 4. View ALL Reservations                           *
+* 5. Find Room from Guest Name                       *
+* 6. EXIT                                            *
+======================================================
+
+Enter your choice: 6
+Exiting...
+
+E:\MCA\SEM 2\JAVA PROGRAMMING (MCA202)\JAVA_project_anshad\Final_Hotel_Management_system@anshad>
